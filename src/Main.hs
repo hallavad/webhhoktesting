@@ -1,3 +1,5 @@
+
+
 module Main where
 
 import qualified Data.ByteString.Lazy as B
@@ -7,5 +9,5 @@ import           Network.HTTP.Listen
 listener :: Listener B.ByteString IO
 listener request = print request >> return Nothing
 
-main :: IO
-main = run 6660 listener
+main :: IO ()
+main = print "Funkar nu" >> run 6660 listener

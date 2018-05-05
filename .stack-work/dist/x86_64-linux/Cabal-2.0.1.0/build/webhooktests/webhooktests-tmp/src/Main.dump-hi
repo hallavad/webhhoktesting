@@ -1,0 +1,176 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-04 23:52:26.417497 UTC
+
+interface main:Main 8022
+  interface hash: 1fde0cec0b0215d47b3afd43dd721345
+  ABI hash: ff3bf23338443ef30ec0667c12552451
+  export-list hash: e5937fb9faac5675e9e8fd9b5a039982
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d812088bf333ae9d35fca6d4a4009a6f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.listener
+  Main.main
+module dependencies:
+package dependencies: HTTP-4000.3.11 array-0.5.2.0 base-4.10.1.0
+                      binary-0.8.5.1 bytestring-0.10.8.2 containers-0.5.10.2
+                      deepseq-1.4.3.0 exceptions-0.8.3 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1
+                      http-listen-0.1.0.0 integer-gmp-1.0.1.0 mtl-2.2.2 network-2.6.3.5
+                      network-uri-2.6.1.0 parsec-3.1.13.0 stm-2.4.5.0
+                      template-haskell-2.12.0.0 text-1.2.3.0 transformers-0.5.2.0
+orphans: stm-2.4.5.0:Control.Monad.STM text-1.2.3.0:Data.Text.Lazy
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show network-2.6.3.5:Network.Socket
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         network-uri-2.6.1.0:Network.URI
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+import  -/  HTTP-4000.3.11:Network.HTTP 82a797b2a872f83636e6fc85882f8111
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 6e5bb580370d8d71dc5888f723cea4b4
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy c2ef93593c27a83e579db501fde77cf6
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy.Internal 9d45fc36ed783c7051cebebd13e7712f
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  http-listen-0.1.0.0:Network.HTTP.Listen cafbe2cbce5ff393bdb8d77802a579ff
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+c124c1ef8ef747ee544c6b4825210f9e
+  listener ::
+    Network.HTTP.Listen.Listener
+      Data.ByteString.Lazy.Internal.ByteString GHC.Types.IO
+  {- Arity: 2, Strictness: <L,1*U(1*U(U,1*U,U,U,U),1*U,U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.listener1
+                  `cast`
+                (<Network.HTTP.Base.Request
+                    Data.ByteString.Lazy.Internal.ByteString>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <GHC.Base.Maybe
+                                  (Network.HTTP.Base.Response
+                                     Data.ByteString.Lazy.Internal.ByteString)>_R)) -}
+ddad0e8e1eeb0ebd64f0f7ef38958b53
+  listener1 ::
+    Network.HTTP.Base.Request Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe
+            (Network.HTTP.Base.Response
+               Data.ByteString.Lazy.Internal.ByteString) #)
+  {- Arity: 2, Strictness: <L,1*U(1*U(U,1*U,U,U,U),1*U,U,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (request :: Network.HTTP.Base.Request
+                                 Data.ByteString.Lazy.Internal.ByteString)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (Network.HTTP.Base.$fShowRequest_$cshow
+                           @ Data.ByteString.Lazy.Internal.ByteString
+                           request)
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Base.Nothing
+                      @ (Network.HTTP.Base.Response
+                           Data.ByteString.Lazy.Internal.ByteString) #) }) -}
+2b94e79b0ff3cdce32388c804926cc8b
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+7c9620d868c8a15c35609d10f30497e1
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 Network.HTTP.Listen.run1
+                   @ Data.ByteString.Lazy.Internal.ByteString
+                   Network.TCP.$fHStreamByteString
+                   Main.main2
+                   Main.listener1
+                     `cast`
+                   (<Network.HTTP.Base.Request
+                       Data.ByteString.Lazy.Internal.ByteString>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <GHC.Base.Maybe
+                                     (Network.HTTP.Base.Response
+                                        Data.ByteString.Lazy.Internal.ByteString)>_R))
+                   ipv }) -}
+116c6d9c394e8f93d9598b7992fca355
+  main2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6660#) -}
+c59b2f632facd82d8a1c3651e3e46b62
+  main3 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.main4) -}
+d75bd5df9ac37f9ee6cfbd413485e20e
+  main4 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   (GHC.CString.unpackCString# Main.main5)
+                   GHC.Show.$fShow[]1) -}
+b3a65c22806bc8561c233d55ce95fd8b
+  main5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Funkar nu"#) -}
+ffc11a1e856c4bff9a5dc4b355acb5e9
+  main6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
