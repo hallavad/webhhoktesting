@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-05-04 23:52:26.417497 UTC
+2018-05-05 10:08:19.50508 UTC
 
 interface main:Main 8022
-  interface hash: 1fde0cec0b0215d47b3afd43dd721345
-  ABI hash: ff3bf23338443ef30ec0667c12552451
+  interface hash: 364d7f12effc2c95296d83ea89bc4da8
+  ABI hash: 0fa396d081c0a11671cc829c1a3e3000
   export-list hash: e5937fb9faac5675e9e8fd9b5a039982
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d812088bf333ae9d35fca6d4a4009a6f
@@ -48,6 +48,7 @@ family instance modules: base-4.10.1.0:Control.Applicative
                          template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
                          text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
 import  -/  HTTP-4000.3.11:Network.HTTP 82a797b2a872f83636e6fc85882f8111
+import  -/  HTTP-4000.3.11:Network.HTTP.Base 689a1353aba0719550ff8e30d3c1f361
 import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
 import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
 import  -/  base-4.10.1.0:System.IO 6e5bb580370d8d71dc5888f723cea4b4
@@ -73,11 +74,48 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-c124c1ef8ef747ee544c6b4825210f9e
+2d8f8ba031dbdd0ba60acf2bb15991c2
+  $wlistener ::
+    Network.URI.URI
+    -> Network.HTTP.Base.RequestMethod
+    -> [Network.HTTP.Headers.Header]
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe
+            (Network.HTTP.Base.Response
+               Data.ByteString.Lazy.Internal.ByteString) #)
+  {- Arity: 5,
+     Strictness: <L,1*U(U,1*U,U,U,U)><L,1*U><L,U><L,1*U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Network.URI.URI)
+                   (ww1 :: Network.HTTP.Base.RequestMethod)
+                   (ww2 :: [Network.HTTP.Headers.Header])
+                   (ww3 :: Data.ByteString.Lazy.Internal.ByteString)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (Network.HTTP.Base.$w$cshow
+                           @ Data.ByteString.Lazy.Internal.ByteString
+                           ww
+                           ww1
+                           ww2)
+                        GHC.Types.True
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (Data.ByteString.Lazy.Internal.$fShowByteString_$cshow ww3)
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    GHC.Base.Nothing
+                      @ (Network.HTTP.Base.Response
+                           Data.ByteString.Lazy.Internal.ByteString) #) } }) -}
+7a7ec8f3aae6452a6977673e4123a2f8
   listener ::
     Network.HTTP.Listen.Listener
       Data.ByteString.Lazy.Internal.ByteString GHC.Types.IO
-  {- Arity: 2, Strictness: <L,1*U(1*U(U,1*U,U,U,U),1*U,U,A)><S,U>,
+  {- Arity: 2, Strictness: <S,1*U(1*U(U,1*U,U,U,U),1*U,U,1*U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.listener1
                   `cast`
@@ -87,7 +125,7 @@ c124c1ef8ef747ee544c6b4825210f9e
                                <GHC.Base.Maybe
                                   (Network.HTTP.Base.Response
                                      Data.ByteString.Lazy.Internal.ByteString)>_R)) -}
-ddad0e8e1eeb0ebd64f0f7ef38958b53
+b17f8cf85df69bf836d8aa39c28afce5
   listener1 ::
     Network.HTTP.Base.Request Data.ByteString.Lazy.Internal.ByteString
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -95,28 +133,20 @@ ddad0e8e1eeb0ebd64f0f7ef38958b53
           GHC.Base.Maybe
             (Network.HTTP.Base.Response
                Data.ByteString.Lazy.Internal.ByteString) #)
-  {- Arity: 2, Strictness: <L,1*U(1*U(U,1*U,U,U,U),1*U,U,A)><S,U>,
+  {- Arity: 2, Strictness: <S,1*U(1*U(U,1*U,U,U,U),1*U,U,1*U)><S,U>,
+     Inline: [0],
      Unfolding: InlineRule (2, True, False)
-                (\ (request :: Network.HTTP.Base.Request
-                                 Data.ByteString.Lazy.Internal.ByteString)
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (Network.HTTP.Base.$fShowRequest_$cshow
-                           @ Data.ByteString.Lazy.Internal.ByteString
-                           request)
-                        GHC.Types.True
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    GHC.Base.Nothing
-                      @ (Network.HTTP.Base.Response
-                           Data.ByteString.Lazy.Internal.ByteString) #) }) -}
-2b94e79b0ff3cdce32388c804926cc8b
+                (\ (w :: Network.HTTP.Base.Request
+                           Data.ByteString.Lazy.Internal.ByteString)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Network.HTTP.Base.Request ww1 ww2 ww3 ww4 ->
+                 Main.$wlistener ww1 ww2 ww3 ww4 w1 }) -}
+b645c73f28be4bb4831cda4198902cba
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7c9620d868c8a15c35609d10f30497e1
+53d20d7d0e88cab850c3f2c917bd40a1
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -158,7 +188,7 @@ d75bd5df9ac37f9ee6cfbd413485e20e
 b3a65c22806bc8561c233d55ce95fd8b
   main5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Funkar nu"#) -}
-ffc11a1e856c4bff9a5dc4b355acb5e9
+14d36c4e5176d97a9a27af06f1f8d078
   main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
